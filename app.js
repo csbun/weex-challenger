@@ -1,3 +1,6 @@
-import foo from './src/foo.vue'
-foo.el = '#root'
-export default new Vue(foo);
+import App from './src/app.vue';
+import router from './src/router';
+
+export default new Vue(Vue.util.extend({ el: '#root', router }, App));
+
+router.push('/foo');
